@@ -63,13 +63,25 @@ from selenium.webdriver.common.by import By
 #
 # browser.quit()
 
-#6
-url = "https://parsinger.ru/selenium/3/3.3.3/index.html"
+# #6
+# url = "https://parsinger.ru/selenium/3/3.3.3/index.html"
+# browser = webdriver.Chrome()
+# browser.get(url)
+# time.sleep(5)
+# browser.find_element(By.ID, "linksContainer").click()
+#
+# time.sleep(5)
+# browser.quit()
+
+#7 Каскадный поиск
+url = "https://parsinger.ru/selenium/3/3.3.1/index.html"
 browser = webdriver.Chrome()
 browser.get(url)
-time.sleep(5)
-browser.find_element(By.ID, "linksContainer").click()
-
-time.sleep(5)
+time.sleep(2)
+parent = browser.find_element(By.ID, "parent_id")
+child = parent.find_element(By.CLASS_NAME, "child_class")
+child.click()
+time.sleep(2)
+password = child.get_attribute("password")
+print(password)
 browser.quit()
-
