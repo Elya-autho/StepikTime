@@ -63,25 +63,49 @@ from selenium.webdriver.common.by import By
 #
 # browser.quit()
 
-# #6
-# url = "https://parsinger.ru/selenium/3/3.3.3/index.html"
-# browser = webdriver.Chrome()
-# browser.get(url)
-# time.sleep(5)
-# browser.find_element(By.ID, "linksContainer").click()
-#
-# time.sleep(5)
-# browser.quit()
-
-#7 Каскадный поиск
-url = "https://parsinger.ru/selenium/3/3.3.1/index.html"
+#6
+url = "https://parsinger.ru/selenium/3/3.3.3/index.html"
 browser = webdriver.Chrome()
 browser.get(url)
 time.sleep(2)
-parent = browser.find_element(By.ID, "parent_id")
-child = parent.find_element(By.CLASS_NAME, "child_class")
-child.click()
+itog = 0
+links = browser.find_elements(By.TAG_NAME, "a")
+for item in links:
+    text = item.get_attribute("stormtrooper")
+    if text.isdigit():
+        itog+=int(text)
+res_input = browser.find_element(By.ID, "inputNumber")
+res_input.send_keys(itog)
+browser.find_element(By.ID, "checkBtn").click()
+# time.sleep(30)
+print(browser.find_element(By.ID, "feedbackMessage").text)
 time.sleep(2)
-password = child.get_attribute("password")
-print(password)
 browser.quit()
+
+
+
+# #7 Каскадный поиск
+# url = "https://parsinger.ru/selenium/3/3.3.1/index.html"
+# browser = webdriver.Chrome()
+# browser.get(url)
+# time.sleep(2)
+# parent = browser.find_element(By.ID, "parent_id")
+# child = parent.find_element(By.CLASS_NAME, "child_class")
+# child.click()
+# time.sleep(2)
+# password = child.get_attribute("password")
+# print(password)
+# browser.quit()
+
+# #8Поиск внутри списка элементов
+# url = "https://parsinger.ru/selenium/3/3.3.2/index.html"
+# browser = webdriver.Chrome()
+# browser.get(url)
+# time.sleep(2)
+# blocks = browser.find_elements(By.CLASS_NAME, "block")
+#
+# for item in blocks:
+#     item.find_element(By.CLASS_NAME,"button").click()
+# time.sleep(2)
+# result = browser.find_element(By.TAG_NAME, "password").text
+# print(result)
