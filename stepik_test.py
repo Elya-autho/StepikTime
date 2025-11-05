@@ -35,15 +35,39 @@ from selenium.webdriver.common.by import By
 # browser.quit()
 
 #4
-url = "https://parsinger.ru/selenium/3/3.2.3/index.html"
+# url = "https://parsinger.ru/selenium/3/3.2.3/index.html"
+# browser = webdriver.Chrome()
+# browser.get(url)
+# browser.find_element(By.ID, "showTextBtn").click()
+# password = browser.find_element(By.ID, "text1").text
+# time.sleep(0.5)
+# browser.find_element(By.ID, "userInput").send_keys(password)
+# time.sleep(0.5)
+# browser.find_element(By.ID, "checkBtn").click()
+# print(browser.find_element(By.ID,"text2").text)
+# time.sleep(5)
+# browser.quit()
+
+#5
+# url = "https://parsinger.ru/selenium/3/3.2.4/index.html"
+# browser = webdriver.Chrome()
+# browser.get(url)
+# time.sleep(5)
+# browser.find_element(By.ID, "secret-key-button").click()
+# time.sleep(5)
+# link = browser.find_element(By.ID, "secret-key-button").get_attribute("data")
+# time.sleep(5)
+# print(link)
+#
+# browser.quit()
+
+#6
+
+url = "https://parsinger.ru/selenium/3/3.3.3/index.html"
 browser = webdriver.Chrome()
 browser.get(url)
-browser.find_element(By.ID, "showTextBtn").click()
-password = browser.find_element(By.ID, "text1").text
-time.sleep(0.5)
-browser.find_element(By.ID, "userInput").send_keys(password)
-time.sleep(0.5)
-browser.find_element(By.ID, "checkBtn").click()
-print(browser.find_element(By.ID,"text2").text)
+time.sleep(5)
+browser.find_element(By.ID, "linksContainer").click()
+
 time.sleep(5)
 browser.quit()
