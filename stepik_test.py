@@ -62,7 +62,6 @@ from selenium.webdriver.common.by import By
 # browser.quit()
 
 #6
-
 url = "https://parsinger.ru/selenium/3/3.3.3/index.html"
 browser = webdriver.Chrome()
 browser.get(url)
