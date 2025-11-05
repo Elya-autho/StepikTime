@@ -71,3 +71,4 @@ browser.find_element(By.ID, "linksContainer").click()
 
 time.sleep(5)
 browser.quit()
+
