@@ -64,23 +64,23 @@ from selenium.webdriver.common.by import By
 # browser.quit()
 
 #6
-url = "https://parsinger.ru/selenium/3/3.3.3/index.html"
-browser = webdriver.Chrome()
-browser.get(url)
-time.sleep(2)
-itog = 0
-links = browser.find_elements(By.TAG_NAME, "a")
-for item in links:
-    text = item.get_attribute("stormtrooper")
-    if text.isdigit():
-        itog+=int(text)
-res_input = browser.find_element(By.ID, "inputNumber")
-res_input.send_keys(itog)
-browser.find_element(By.ID, "checkBtn").click()
-# time.sleep(30)
-print(browser.find_element(By.ID, "feedbackMessage").text)
-time.sleep(2)
-browser.quit()
+# url = "https://parsinger.ru/selenium/3/3.3.3/index.html"
+# browser = webdriver.Chrome()
+# browser.get(url)
+# time.sleep(2)
+# itog = 0
+# links = browser.find_elements(By.TAG_NAME, "a")
+# for item in links:
+#     text = item.get_attribute("stormtrooper")
+#     if text.isdigit():
+#         itog+=int(text)
+# res_input = browser.find_element(By.ID, "inputNumber")
+# res_input.send_keys(itog)
+# browser.find_element(By.ID, "checkBtn").click()
+# # time.sleep(30)
+# print(browser.find_element(By.ID, "feedbackMessage").text)
+# time.sleep(2)
+# browser.quit()
 
 
 
@@ -109,3 +109,36 @@ browser.quit()
 # time.sleep(2)
 # result = browser.find_element(By.TAG_NAME, "password").text
 # print(result)
+
+#8 Мастер заполнения форм
+# url ="https://parsinger.ru/selenium/1/1.html"
+# browser = webdriver.Chrome()
+# browser.get(url)
+# time.sleep(0.5)
+# form = browser.find_elements(By.TAG_NAME, "input")
+# for input_text in form:
+#      if input_text.get_attribute("type") == "button":
+#           input_text.click()
+#           break
+#
+#      input_text.send_keys("Текст")
+#
+# result = browser.find_element(By.ID, "result")
+# time.sleep(3)
+# print(result.text)
+# time.sleep(20)
+# browser.quit()
+
+
+# #9 Охотник за сокровищами
+# url ="https://parsinger.ru/selenium/2/2.html"
+# browser = webdriver.Chrome()
+# browser.get(url)
+# time.sleep(1)
+#
+# link = browser.find_element(By.LINK_TEXT, "16243162441624").click()
+# time.sleep(1)
+# result = browser.find_element(By.ID, "result")
+# print(result.text)
+#
+# browser.quit()
