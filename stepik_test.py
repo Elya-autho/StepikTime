@@ -144,4 +144,34 @@ from selenium.webdriver.common.by import By
 # browser.quit()
 
 
+#10
+# url = "https://parsinger.ru/selenium/3/3.html"
+# browser = webdriver.Chrome()
+# browser.get(url)
+# time.sleep(1)
+# data = browser.find_elements(By.TAG_NAME, "p")
+#
+# summ = 0
+# for i in data:
+#     summ+=int(i.text)
+#
+# print (summ)
+#
+# browser.quit()
 
+
+
+#11
+url = "https://parsinger.ru/selenium/3/3.html"
+browser = webdriver.Chrome()
+browser.get(url)
+time.sleep(1)
+data = browser.find_elements(By.XPATH, '//div[@class="text"]/p[2]')
+
+summ = 0
+for i in data:
+    summ += int(i.text)
+
+print (summ)
+
+browser.quit()
