@@ -162,16 +162,36 @@ from selenium.webdriver.common.by import By
 
 
 #11
-url = "https://parsinger.ru/selenium/3/3.html"
-browser = webdriver.Chrome()
-browser.get(url)
-time.sleep(1)
-data = browser.find_elements(By.XPATH, '//div[@class="text"]/p[2]')
+# url = "https://parsinger.ru/selenium/3/3.html"
+# browser = webdriver.Chrome()
+# browser.get(url)
+# time.sleep(1)
+# data = browser.find_elements(By.XPATH, '//div[@class="text"]/p[2]')
+#
+# summ = 0
+# for i in data:
+#     summ += int(i.text)
+#
+# print (summ)
+#
+# browser.quit()
 
-summ = 0
-for i in data:
-    summ += int(i.text)
+#
+# #12
+# url = "https://parsinger.ru/selenium/4/4.html"
+# browser = webdriver.Chrome()
+# browser.get(url)
+# time.sleep(1)
+# checkboxes = browser.find_elements(By.XPATH, '//div[@class="content"]/input')
+# time.sleep(1)
+#
+# for checkbox in checkboxes:
+#     checkbox.click()
+# button =  browser.find_element(By.CLASS_NAME, 'btn')
+# button.click()
+# time.sleep(1)
+# result = browser.find_element(By.ID, 'result')
+# time.sleep(1)
+# print(result.text)
+# browser.quit()
 
-print (summ)
-
-browser.quit()
