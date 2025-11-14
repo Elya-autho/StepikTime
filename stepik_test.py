@@ -297,8 +297,16 @@ from selenium.webdriver.common.by import By
 # text_alert = browser.switch_to.alert
 # print(text_alert.text)
 # time.sleep(20)
+# browser.quit()
 
-
-browser.quit()
-
+#
+# #17
+# url = "https://parsinger.ru/selenium/6/6.2.1/index.html"
+# browser = webdriver.Chrome()
+# browser.get(url)
+# time.sleep(10)
+# img = browser.find_element(By.ID, "this_pic").click()
+# browser.get_screenshot_as_file("C:\\Users\\Filippova.Elvina.RW\\Downloads\\Для тестирования\\skreen2_14.png")
+# time.sleep(10)
+# browser.quit()
 
