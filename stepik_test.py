@@ -232,4 +232,73 @@ from selenium.webdriver.common.by import By
 # print(result)
 # browser.quit()
 
+# #14
+# url = "https://parsinger.ru/selenium/7/7.html"
+# browser = webdriver.Chrome()
+# browser.get(url)
+# time.sleep(1)
+#
+# select =  browser.find_elements(By.TAG_NAME, "option")
+# summ = 0
+# for option in select:
+#     summ+=int(option.text)
+#
+# field = browser.find_element(By.ID, "input_result").send_keys(str(summ))
+# time.sleep(1)
+# button = browser.find_element(By.CLASS_NAME, "btn_box").click()
+# time.sleep(1)
+# result = browser.find_element(By.ID, "result").text
+# print(result)
+#
+# browser.quit()
+
+#15
+#
+# url = "https://parsinger.ru/selenium/6/6.html"
+# browser = webdriver.Chrome()
+# browser.get(url)
+# time.sleep(1)
+# equation = browser.find_element(By.ID,"text_box").text
+# result = eval(equation)
+# # print (result, type(result))
+# select = browser.find_elements(By.TAG_NAME, "option")
+# for i in select:
+#     if str(result) == i.text:
+#         i.click()
+#         break
+# time.sleep(3)
+# button = browser.find_element(By.ID, "sendbutton").click()
+# time.sleep(2)
+# result = browser.find_element(By.ID, "result").text
+# print(result)
+#
+# browser.quit()
+
+
+#16
+# url = "https://parsinger.ru/selenium/6/6.2/index.html"
+# browser = webdriver.Chrome()
+# browser.get(url)
+# time.sleep(1)
+# button_1 = browser.find_element(By.PARTIAL_LINK_TEXT, "2")
+# time.sleep(1)
+# button_1.click()
+# time.sleep(2)
+# button_2 = browser.find_element(By.PARTIAL_LINK_TEXT, "3")
+# button_2.click()
+# time.sleep(2)
+# browser.back()
+# time.sleep(2)
+# browser.back()
+# time.sleep(2)
+# button_3 = browser.find_element(By.ID, "getPasswordBtn")
+# button_3.click()
+# time.sleep(2)
+# text_alert = browser.switch_to.alert
+# print(text_alert.text)
+# time.sleep(20)
+
+
+browser.quit()
+
 
