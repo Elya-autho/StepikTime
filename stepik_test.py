@@ -306,7 +306,7 @@ from selenium.webdriver.common.by import By
 # browser.get(url)
 # time.sleep(10)
 # img = browser.find_element(By.ID, "this_pic").click()
-# browser.get_screenshot_as_file("C:\\Users\\Filippova.Elvina.RW\\Downloads\\Для тестирования\\skreen2_14.png")
+# browser.get_screenshot_as_file("C:\\Users\\Filippova.Elvina.RW\\Downloads\\Для тестирования\\skreen2_14.jpg")
 # time.sleep(10)
 # browser.quit()
 
