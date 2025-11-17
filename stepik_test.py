@@ -310,3 +310,33 @@ from selenium.webdriver.common.by import By
 # time.sleep(10)
 # browser.quit()
 
+# #18
+# url = "https://parsinger.ru/selenium/6/6.3.1/index.html"
+# browser = webdriver.Chrome()
+# browser.get(url)
+# time.sleep(1)
+# cookie = browser.get_cookie("token_22")
+# time.sleep(1)
+# print(cookie.values())
+# browser.quit()
+
+#19
+url = "https://parsinger.ru/selenium/6/6.3/index.html"
+browser = webdriver.Chrome()
+browser.get(url)
+time.sleep(1)
+cookies = browser.get_cookies()
+for cookie in cookies:
+        print(cookie['name'])
+time.sleep(1)
+print(cookies)
+time.sleep(1)
+field = browser.find_elements(By.CSS_SELECTOR, "text")
+time.sleep(1)
+#20
+# url = "https://parsinger.ru/selenium/6/6.3.2/index.html"
+# browser = webdriver.Chrome()
+# browser.get(url)
+# time.sleep(1)
+# cookies = browser.delete_all_cookies()
+# browser.quit()
